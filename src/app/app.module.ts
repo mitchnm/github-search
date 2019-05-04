@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GHSFormComponent } from './ghs-form/ghs-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GHSFormComponent
   ],
   imports: [
     BrowserModule,
