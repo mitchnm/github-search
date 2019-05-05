@@ -6,10 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ghsdeets.component.css']
 })
 export class GHSdeetsComponent implements OnInit {
+  profile:any= []
+  repos:any= []
+  username:string
 
-  constructor() { }
+  constructor(private detailspageServe:DetailspageService) { }
 
-  ngOnInit() {
-  }
+ngOnInit() {
 
+
+
+}
+
+findprofile(){
+ this.detailspageServe.updateprofile(this.username);
+ this.detailspageServe.getprofileInfo(this.username).subscribe(profile=>{
+   console.log(profile);
+   this.profile=profile;
+})
+ this.detailspageServe.getprofileRepos().subscribe(repos=>{
+   console.log(repos);
+   this.repos=repos;
+ })
+
+}
 }
