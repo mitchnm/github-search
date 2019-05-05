@@ -15,7 +15,7 @@
           <li class="list-group-item"><strong>Location: </strong>{{profile.location}}</li>
           <li class="list-group-item"><strong>Blog: </strong>{{profile.blog}}</li>
           <li class="list-group-item"><strong>Member Since: </strong>{{profile.created_at}}</li><br>
-          <div class="stats" style="text-align:center">
+          <div style="text-align:center">
             <span class="badge badge-secondary">{{profile.public_repos}} Public Repos</span> &nbsp;
             <span class="badge badge-success">{{profile.followers}} Followers</span> &nbsp;
             <span class="badge badge-info">{{profile.following}} Following</span>
@@ -36,7 +36,8 @@
     <div *ngFor="let repo of repos" style="text-align:center">
       <h4><a href="{{repo.html_url}}"><u>{{repo.name}}</u></a></h4>
       <p>{{repo.description}}</p>
-      <span class="badge badge-default">{{repo.watchers}} Watchers</span>
+      
+      <span class="badge badge-success">{{repo.watchers}} Watchers</span>
       <span class="badge badge-primary">{{repo.forks}} Forks</span>
     </div>
 </div>
