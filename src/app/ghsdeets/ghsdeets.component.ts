@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GhsService } from '../ghss/ghs.service';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-ghsdeets',
@@ -10,21 +12,18 @@ export class GHSdeetsComponent implements OnInit {
   repos:any= []
   username:string
 
-  constructor(private detailspageServe:DetailspageService) { }
+  constructor(private ghsServe:GhsService) { }
 
 ngOnInit() {
-
-
-
 }
 
 findprofile(){
- this.detailspageServe.updateprofile(this.username);
- this.detailspageServe.getprofileInfo(this.username).subscribe(profile=>{
+ this.ghsServe.updateprofile(this.username);
+ this.ghsServe.getprofileInfo(this.username).subscribe(profile=>{
    console.log(profile);
    this.profile=profile;
 })
- this.detailspageServe.getprofileRepos().subscribe(repos=>{
+ this.ghsServe.getprofileRepos().subscribe(repos=>{
    console.log(repos);
    this.repos=repos;
  })
