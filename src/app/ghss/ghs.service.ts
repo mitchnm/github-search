@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class GhsService {
   private username: string;
-  private apikey :string = "741c229b175d2ec3a447b533536a59f5b5079d4e";
+  private apikey :string = "1ad71de384e256c9f32cde9bc878b6052f53b84f";
 
   constructor(private http:HttpClient) { 
     console.log("service is ready");
