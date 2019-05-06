@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { GHSdeetsComponent } from './ghsdeets/ghsdeets.component'
 import { GhsService } from './ghss/ghs.service';
+import { GSComponent } from './gs/gs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GHSdeetsComponent,
+    GSComponent,
   ],
   imports: [
     BrowserModule,

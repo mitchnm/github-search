@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GhsService } from '../ghss/ghs.service';
-import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-ghsdeets',
