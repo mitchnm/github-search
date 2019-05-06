@@ -13,6 +13,7 @@ form {
 }
 
 body {
+  background-image: url("https://i.pinimg.com/564x/40/c7/12/40c712e5f3833bc38dbe1213da27069e.jpg");
   width: 100%;
   height: 100%;
   background-attachment: fixed;
@@ -21,7 +22,6 @@ body {
   color: black;
   text-decoration: none;
   font-size: large;
-
 }
 
 h1 {
@@ -44,7 +44,9 @@ button {
 }
 
 #ngamia {
-  border: 2px solid black;
+  border: 2px solid whitesmoke;
   padding-bottom: 0px;
 }
-
+p {
+  color: aquamarine;
+}
