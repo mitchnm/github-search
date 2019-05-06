@@ -1,5 +1,5 @@
 <body>
-  <h1 style="text-align:center" appHighlight ><em><strong><u>GITHUB SEARCH.</u></strong></em></h1>
+  <h1 style="text-align:center"><em><strong><u>GITHUB SEARCH.</u></strong></em></h1>
   <div class="container">
     <div style="margin-top:30px;" width="100%">
 
@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-md-6">
           <ul class="list-group">
-            <li class="list-group-item" ><strong>Username: </strong>{{profile.login}}</li>
+            <li class="list-group-item"><strong>Username: </strong>{{profile.login}}</li>
             <li class="list-group-item"><strong>Email: </strong>{{profile.email}}</li>
             <li class="list-group-item"><strong>Location: </strong>{{profile.location}}</li>
             <li class="list-group-item"><strong>Member Since: </strong>{{profile.created_at}}</li><br>
@@ -26,20 +26,20 @@
 
 
         <div class="col-md-6">
-          <img class="img-circle img-responsive" src="{{profile.avatar_url}}" style="size:0px">
+          <img class="img-circle img-responsive" src="{{profile.avatar_url}}" >
         </div>
       </div>
       <br><br>
 
-      <strong><em><u>
-            <h3 style="text-align:center">REPOSITORIES:</h3>
-          </u></em></strong>
-      <div *ngFor="let repo of repos" style="text-align:center" id="ngamia">
-        <h4><a href="{{repo.html_url}}"><u>{{repo.name}}</u></a></h4>
-        <p>{{repo.description}}</p>
-
-        <span class="badge badge-success">{{repo.watchers}} Watchers</span>
-        <span class="badge badge-primary">{{repo.forks}} Forks</span>
+      
+        <strong><em><u><h3 style="text-align:center;">REPOSITORIES:</h3></u></em></strong>
+        <div class="row">
+        <div *ngFor="let repo of repos" style="text-align:center" id="ngamia" class="col-md-6" appHighlight>
+          <h4><a href="{{repo.html_url}}"><u>{{repo.name}}</u></a></h4>
+          <p>{{repo.description}}</p>
+          <span class="badge badge-success">{{repo.watchers}} Watchers</span>
+          <span class="badge badge-primary">{{repo.forks}} Forks</span>
+        </div>
       </div>
     </div>
   </div>
