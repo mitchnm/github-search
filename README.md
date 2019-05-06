@@ -1,6 +1,28 @@
 # Githubsearch
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+#### By **MITCH MUHU**
+## Description
+This in an app where on can serarch his or her github profile and all the details including the repositories and the time one joined.
+## Setup/Installation Requirements
+* git clone https://github.com/mitchnm/QUOTES.git
+* cd QUOTES
+* Open with your favourite text editor
+## Known Bugs
+There are no known bugs.
+## Technologies Used
+* HTMl 
+* CSS  
+* Bootstrap 
+* Typescript
+## Support and contact details
+if there are any issues,contact me through my email: "mitchndungu21@gmail.com"
+
+### BDD
+| Behavior        | Result |
+| ------------- |:----:|
+| User inputs username  | Profile of the searched user appears on the results section |
+| User clicks on the search Repository in the navbar | page redirects and shows the search details which are the repositories of the searched user  |
+| User clicks on home in the navbar | page refreshes and fresh inputs are required, default profile shows |
 
 ## Development server
 
