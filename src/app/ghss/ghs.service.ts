@@ -10,7 +10,7 @@ export class GhsService {
     console.log("service is ready");
   }
   getprofileInfo(username) {
-    console.log(this.username);
+    console.log(this.username); 
     return this.http.get("https://api.github.com/users/"+username+"?access_token" + this.apikey)
   }
   getprofileRepos() {
@@ -19,4 +19,4 @@ export class GhsService {
 updateprofile(username:string) {
   this.username=username
 }
-}
+} 
