@@ -45,8 +45,8 @@ button {
 
 #ngamia {
   border: 2px solid whitesmoke;
-  padding-bottom: 0px;
+  padding: 10px;
 }
 p {
-  color: aquamarine;
+  color: crimson;
 }
