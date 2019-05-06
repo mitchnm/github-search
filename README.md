@@ -21,8 +21,8 @@ if there are any issues,contact me through my email: "mitchndungu21@gmail.com"
 | Behavior        | Result |
 | ------------- |:----:|
 | User inputs username  | Profile of the searched user appears on the results section |
-| User clicks on the search Repository in the navbar | page redirects and shows the search details which are the repositories of the searched user  |
-| User clicks on home in the navbar | page refreshes and fresh inputs are required, default profile shows |
+| User clicks on the search  | page redirects and shows the search details which are   |
+
 
 ## Development server
 
