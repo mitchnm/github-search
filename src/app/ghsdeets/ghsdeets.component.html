@@ -1,46 +1,46 @@
 <body>
-<h1 style="text-align:center"><em><strong><u>GITHUB SEARCH.</u></strong></em></h1>
-<div class="container">
-  <div style="margin-top:30px;" width="100%">
+  <h1 style="text-align:center" appHighlight ><em><strong><u>GITHUB SEARCH.</u></strong></em></h1>
+  <div class="container">
+    <div style="margin-top:30px;" width="100%">
 
-    <form (ngSubmit)='findprofile()' class="search-form">
-      <div class="form-group" style="text-align:center">
-        <input type="text" placeholder="Github username" [(ngModel)]="username" name="username" style="width:50%"><button class="btn btn-danger" type="submit">search</button>
+      <form (ngSubmit)='findprofile()' class="search-form">
+        <div class="form-group" style="text-align:center">
+          <input type="text" placeholder="Github username" [(ngModel)]="username" name="username"
+            style="width:50%"><button class="btn btn-danger" type="submit">search</button>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item" ><strong>Username: </strong>{{profile.login}}</li>
+            <li class="list-group-item"><strong>Email: </strong>{{profile.email}}</li>
+            <li class="list-group-item"><strong>Location: </strong>{{profile.location}}</li>
+            <li class="list-group-item"><strong>Member Since: </strong>{{profile.created_at}}</li><br>
+            <div style="text-align:center">
+              <span class="badge badge-secondary">{{profile.public_repos}} Public Repos</span> &nbsp;
+              <span class="badge badge-success">{{profile.followers}} Followers</span> &nbsp;
+              <span class="badge badge-info">{{profile.following}} Following</span>
+            </div>
+          </ul>
+        </div>
+
+
+        <div class="col-md-6">
+          <img class="img-circle img-responsive" src="{{profile.avatar_url}}" style="size:0px">
+        </div>
       </div>
-    </form>
-    <div class="row">
-      <div class="col-md-6">
-        <ul class="list-group">
-          <li class="list-group-item"><strong>Username: </strong>{{profile.login}}</li>
-          <li class="list-group-item"><strong>Email: </strong>{{profile.email}}</li>
-          <li class="list-group-item"><strong>Location: </strong>{{profile.location}}</li>
-          <li class="list-group-item"><strong>Blog: </strong>{{profile.blog}}</li>
-          <li class="list-group-item"><strong>Member Since: </strong>{{profile.created_at}}</li><br>
-          <div style="text-align:center">
-            <span class="badge badge-secondary">{{profile.public_repos}} Public Repos</span> &nbsp;
-            <span class="badge badge-success">{{profile.followers}} Followers</span> &nbsp;
-            <span class="badge badge-info">{{profile.following}} Following</span>
-          </div>
-        </ul>
-      </div>
+      <br><br>
 
+      <strong><em><u>
+            <h3 style="text-align:center">REPOSITORIES:</h3>
+          </u></em></strong>
+      <div *ngFor="let repo of repos" style="text-align:center" id="ngamia">
+        <h4><a href="{{repo.html_url}}"><u>{{repo.name}}</u></a></h4>
+        <p>{{repo.description}}</p>
 
-      <div class="col-md-6">
-        <img class="img-circle img-responsive" src="{{profile.avatar_url}}" style="size:0px">
+        <span class="badge badge-success">{{repo.watchers}} Watchers</span>
+        <span class="badge badge-primary">{{repo.forks}} Forks</span>
       </div>
     </div>
-    <br><br>
-
-    <strong><em><u>
-        <h3 style="text-align:center">REPOSITORIES:</h3>
-      </u></em></strong>
-    <div *ngFor="let repo of repos" style="text-align:center" id="ngamia">
-      <h4><a href="{{repo.html_url}}"><u>{{repo.name}}</u></a></h4>
-      <p>{{repo.description}}</p>
-      
-      <span class="badge badge-success">{{repo.watchers}} Watchers</span>
-      <span class="badge badge-primary">{{repo.forks}} Forks</span>
-    </div>
-</div>
-</div>
+  </div>
 </body>

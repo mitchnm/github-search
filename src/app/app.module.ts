@@ -8,12 +8,14 @@ import {HttpClientModule} from '@angular/common/http';
 import { GHSdeetsComponent } from './ghsdeets/ghsdeets.component'
 import { GhsService } from './ghss/ghs.service';
 import { GSComponent } from './gs/gs.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     GHSdeetsComponent,
     GSComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
